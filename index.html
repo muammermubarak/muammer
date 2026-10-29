@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muammer Mubarak Anik | Growth Strategist, Venture Builder & Executive Corporate Trainer</title>
-  <meta name="description" content="Official portfolio and advisory platform of Muammer Mubarak Anik: 2x Startup Founder, Corporate Trainer (5,000+ trained), and GTM Management Consultant specializing in Cleantech, B2B Industrials, and ESG ventures.">
-  
+  <title>Muammer Mubarak Anik | Management Consultant & Entrepreneur</title>
+  <meta name="description" content="Official portfolio and advisory platform of Muammer Mubarak Anik: Management Consultant & Entrepreneur, 2x Startup Founder, Corporate Trainer (5,000+ trained), and GTM strategist in Cleantech, ESG, and B2B Industrials.">
+
   <!-- Google Fonts: Inter & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome CDN -->
+
+  <!-- Font Awesome CDN for Reliable Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -27,14 +27,17 @@
           },
           colors: {
             brand: {
-              dark: '#090D16',
-              surface: '#0F172A',
-              card: '#162035',
-              border: '#1E293B',
-              accent: '#10B981',       /* Emerald 500 */
-              accentLight: '#34D399',  /* Emerald 400 */
-              cyan: '#06B6D4',
-              gold: '#F59E0B'
+              base: '#C7D0D8',       /* Precise Light Slate requested */
+              lightSlate: '#D9E1E8',
+              surface: 'rgba(255, 255, 255, 0.82)',
+              card: 'rgba(255, 255, 255, 0.72)',
+              border: 'rgba(255, 255, 255, 0.65)',
+              accent: '#059669',     /* Deep Emerald 600 */
+              accentLight: '#10B981',/* Emerald 500 */
+              cyan: '#0891B2',       /* Cyan 600 */
+              cyanLight: '#06B6D4',  /* Cyan 500 */
+              dark: '#0F172A',       /* Slate 900 for high-contrast crisp text */
+              muted: '#475569',      /* Slate 600 */
             }
           }
         }
@@ -43,73 +46,87 @@
   </script>
 
   <style>
-    /* Glassmorphism and gradient accents */
+    /* Custom light-slate glassmorphism and ambient styles */
+    body {
+      background-color: #C7D0D8;
+    }
     .glass-nav {
-      background: rgba(9, 13, 22, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(199, 208, 216, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
     .glass-card {
-      background: linear-gradient(135deg, rgba(22, 32, 53, 0.75) 0%, rgba(15, 23, 42, 0.9) 100%);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 10px 30px -8px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card:hover {
-      border-color: rgba(16, 185, 129, 0.35);
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(5, 150, 105, 0.45);
       transform: translateY(-4px);
-      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 20px -6px rgba(16, 185, 129, 0.2);
+      box-shadow: 0 20px 40px -10px rgba(5, 150, 105, 0.15), 0 8px 20px -4px rgba(8, 145, 178, 0.1);
     }
-    .glow-bg {
-      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.05) 35%, transparent 70%);
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      transition: all 0.25s ease;
     }
-    .text-gradient {
-      background: linear-gradient(135deg, #FFFFFF 20%, #94A3B8 70%, #10B981 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .glass-pill:hover {
+      background: #FFFFFF;
+      border-color: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.12);
     }
     .text-emerald-gradient {
-      background: linear-gradient(135deg, #34D399 0%, #06B6D4 100%);
+      background: linear-gradient(135deg, #047857 0%, #0891B2 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .ambient-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(5, 150, 105, 0.16) 0%, rgba(8, 145, 178, 0.1) 40%, transparent 75%);
     }
   </style>
 </head>
 
-<body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-white relative overflow-x-hidden min-h-screen">
+<body class="text-slate-900 font-sans antialiased selection:bg-emerald-600 selection:text-white relative overflow-x-hidden min-h-screen">
 
-  <!-- Ambient Glow Effect in Background -->
-  <div class="fixed inset-0 glow-bg pointer-events-none z-0"></div>
+  <!-- Ambient Light Reflection -->
+  <div class="fixed inset-0 ambient-glow pointer-events-none z-0"></div>
 
   <!-- ==================== NAVIGATION BAR ==================== -->
-  <header class="sticky top-0 z-50 glass-nav border-b border-brand-border/60 transition-all duration-300">
+  <header class="sticky top-0 z-50 glass-nav border-b border-white/60 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        
-        <!-- Brand / Identity -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-accent to-brand-cyan flex items-center justify-center text-brand-dark font-display font-extrabold text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+
+        <!-- Brand Identity -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 to-cyan-600 flex items-center justify-center text-white font-display font-extrabold text-xl shadow-md shadow-emerald-700/20 group-hover:scale-105 transition-transform">
             M
           </div>
           <div class="flex flex-col">
-            <span class="font-display font-bold text-lg text-white tracking-tight group-hover:text-brand-accentLight transition-colors">
+            <span class="font-display font-bold text-lg text-slate-950 tracking-tight group-hover:text-emerald-700 transition-colors">
               Muammer Mubarak Anik
             </span>
-            <span class="text-xs uppercase tracking-wider text-slate-400 font-medium">Growth & Venture Strategist</span>
+            <span class="text-xs uppercase tracking-wider text-slate-600 font-semibold">Management Consultant &amp; Entrepreneur</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-          <a href="#workshops" class="text-slate-300 hover:text-brand-accentLight transition-colors">Masterclasses</a>
-          <a href="#ventures" class="text-slate-300 hover:text-brand-accentLight transition-colors">Track Record</a>
-          <a href="#achievements" class="text-slate-300 hover:text-brand-accentLight transition-colors">Accreditation</a>
-          <a href="#about" class="text-slate-300 hover:text-brand-accentLight transition-colors">About</a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+          <a href="#focus" class="hover:text-emerald-700 transition-colors">Capabilities</a>
+          <a href="#workshops" class="hover:text-emerald-700 transition-colors">Masterclasses</a>
+          <a href="#ventures" class="hover:text-emerald-700 transition-colors">Track Record</a>
+          <a href="#achievements" class="hover:text-emerald-700 transition-colors">Accreditation</a>
+          <a href="#about" class="hover:text-emerald-700 transition-colors">Profile</a>
         </nav>
 
         <!-- Primary Action CTA -->
         <div class="hidden md:flex items-center gap-4">
-          <a href="#booking" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold text-brand-dark bg-gradient-to-r from-brand-accent to-brand-cyan hover:opacity-95 shadow-md shadow-emerald-500/20 transition-all hover:shadow-emerald-500/30 hover:scale-105">
+          <a href="#booking" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold text-white bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 shadow-md shadow-emerald-700/20 transition-all hover:scale-105">
             <i class="fa-regular fa-calendar-check text-sm"></i>
             Book Advisory
           </a>
@@ -117,7 +134,7 @@
 
         <!-- Mobile Menu Toggle Button -->
         <div class="flex md:hidden">
-          <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors">
+          <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-xl text-slate-700 hover:text-slate-950 hover:bg-white/60 focus:outline-none transition-colors">
             <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
           </button>
         </div>
@@ -125,14 +142,15 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-brand-surface/95 border-b border-brand-border px-4 pt-3 pb-6 space-y-3">
-      <a href="#workshops" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-accent hover:bg-slate-800/60 mobile-nav-link">Executive Workshops</a>
-      <a href="#ventures" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-accent hover:bg-slate-800/60 mobile-nav-link">Ventures & Track Record</a>
-      <a href="#achievements" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-accent hover:bg-slate-800/60 mobile-nav-link">Accreditation</a>
-      <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-accent hover:bg-slate-800/60 mobile-nav-link">Executive Profile</a>
+    <div id="mobileMenu" class="hidden md:hidden bg-white/95 border-b border-slate-300 px-5 pt-3 pb-6 space-y-3 shadow-xl">
+      <a href="#focus" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-800 hover:text-emerald-700 hover:bg-slate-100 mobile-nav-link">Strategic Capabilities</a>
+      <a href="#workshops" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-800 hover:text-emerald-700 hover:bg-slate-100 mobile-nav-link">Executive Masterclasses</a>
+      <a href="#ventures" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-800 hover:text-emerald-700 hover:bg-slate-100 mobile-nav-link">Ventures &amp; Track Record</a>
+      <a href="#achievements" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-800 hover:text-emerald-700 hover:bg-slate-100 mobile-nav-link">Accreditation &amp; Awards</a>
+      <a href="#about" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-800 hover:text-emerald-700 hover:bg-slate-100 mobile-nav-link">Executive Profile</a>
       <div class="pt-2">
-        <a href="#booking" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-brand-dark bg-brand-accent mobile-nav-link">
-          <i class="fa-regular fa-calendar-check"></i> Book Executive Consultation
+        <a href="#booking" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-bold text-white bg-gradient-to-r from-emerald-600 to-cyan-600 mobile-nav-link shadow">
+          <i class="fa-regular fa-calendar-check"></i> Book Executive Advisory
         </a>
       </div>
     </div>
@@ -140,93 +158,96 @@
 
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden z-10">
+  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
+
         <!-- Hero Text & Value Proposition -->
         <div class="lg:col-span-8 space-y-6 text-center lg:text-left">
-          
+
           <!-- Trust Badge -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-brand-accentLight text-xs font-semibold uppercase tracking-wider shadow-inner">
-            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
-            Web Summit 2025 Honoree &bull; SDG Brand Champion
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-emerald-600/30 bg-emerald-500/10 text-emerald-900 text-xs font-bold uppercase tracking-wider shadow-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+            Web Summit 2025 Honoree &bull; SDG Brand Champion 2024
           </div>
 
-          <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.12] tracking-tight">
-            Transforming Market Opportunities into <span class="text-emerald-gradient">Scalable Category Leaders</span>
+          <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.12] tracking-tight text-slate-950">
+            Scaling CleanTech Ventures, GTM Engines &amp; <span class="text-emerald-gradient">Category Leadership</span>
           </h1>
 
-          <p class="text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Social Entrepreneur, Strategic Marketing Specialist, and Corporate Trainer. Over a decade building B2B go-to-market engines, scaling cleantech startups, and equipping corporate teams across APAC to drive sustainable profitability.
+          <p class="text-slate-700 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <strong>Management Consultant &amp; Entrepreneur</strong> with a decade of proven experience scaling high-complexity B2B industrials, electric mobility ecosystems, and global sustainable export networks across 40+ countries.
           </p>
 
           <!-- Core Call-to-Actions -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-            <a href="#booking" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-sm font-bold text-brand-dark bg-gradient-to-r from-brand-accent to-brand-cyan hover:opacity-95 shadow-lg shadow-emerald-500/25 transition-all hover:scale-105">
+            <a href="#booking" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 shadow-lg shadow-emerald-700/25 transition-all hover:scale-105">
               <span>Schedule Executive Briefing</span>
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
-            <a href="#workshops" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-sm font-semibold text-slate-200 border border-slate-700 bg-slate-900/60 hover:bg-slate-800 hover:border-slate-500 transition-all">
-              <i class="fa-solid fa-chalkboard-user text-brand-accentLight"></i>
-              <span>Explore Workshop Modules</span>
+            <a href="#workshops" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-sm font-bold text-slate-800 border border-white/80 bg-white/70 hover:bg-white hover:border-emerald-600/40 shadow-sm transition-all">
+              <i class="fa-solid fa-chalkboard-user text-emerald-600"></i>
+              <span>Explore Masterclass Modules</span>
             </a>
           </div>
 
-          <!-- Quick Credibility Badges -->
-          <div class="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-brand-accent"></i> Harvard Business School Online Alumni</span>
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-brand-cyan"></i> 2x High-Impact CleanTech Founder</span>
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-users text-brand-accent"></i> 5,000+ Students & Professionals Trained</span>
+          <!-- Credibility Trust Badges -->
+          <div class="pt-6 border-t border-slate-400/40 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-700 font-medium">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-award text-emerald-700"></i> Harvard Business School Online (Cert.)</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-bolt text-cyan-700"></i> 2x Sustainable Cleantech Co-Founder</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-users text-emerald-700"></i> 5,000+ Leaders &amp; Students Coached</span>
           </div>
         </div>
 
-        <!-- Hero Executive Card / Visual -->
+        <!-- Hero Executive Profile Card -->
         <div class="lg:col-span-4 flex justify-center lg:justify-end">
           <div class="relative w-full max-w-sm">
-            <!-- Glow ring background -->
-            <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-brand-accent/40 to-brand-cyan/40 blur-xl opacity-75 animate-pulse"></div>
-            
-            <div class="relative rounded-2xl glass-card p-6 border border-slate-700/80 shadow-2xl space-y-6">
+            <div class="glass-card rounded-3xl p-7 border-2 border-white/90 shadow-2xl space-y-6">
+
               <div class="flex items-center gap-4">
-                <div class="w-16 h-16 rounded-2xl bg-slate-800 border-2 border-emerald-500/40 p-1 flex items-center justify-center overflow-hidden">
-                  <!-- Fallback styled initials avatar with SVG profile frame -->
-                  <div class="w-full h-full rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center text-white font-display font-bold text-2xl">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-700 to-cyan-700 p-1 flex items-center justify-center shadow-md">
+                  <div class="w-full h-full rounded-xl bg-slate-900 flex items-center justify-center text-white font-display font-extrabold text-2xl">
                     MA
                   </div>
                 </div>
                 <div>
-                  <h3 class="font-display font-bold text-lg text-white">Muammer Mubarak Anik</h3>
-                  <p class="text-xs text-brand-accentLight font-medium">Head of Advisory & Founder</p>
-                  <p class="text-xs text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot text-rose-400 mr-1"></i>Dhaka, Bangladesh</p>
+                  <h3 class="font-display font-bold text-lg text-slate-950">Muammer Mubarak Anik</h3>
+                  <p class="text-xs text-emerald-800 font-bold">Management Consultant &amp; Entrepreneur</p>
+                  <p class="text-xs text-slate-600 mt-0.5"><i class="fa-solid fa-location-dot text-rose-500 mr-1"></i>Dhaka, Bangladesh</p>
                 </div>
               </div>
 
-              <!-- Quick Focus Areas Tags -->
-              <div class="space-y-2">
-                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block">Strategic Focus:</span>
-                <div class="flex flex-wrap gap-1.5 text-xs">
-                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">GTM Architecture</span>
-                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">EV & Clean Mobility</span>
-                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">ESG Export Strategy</span>
-                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">Sales SOP Design</span>
+              <!-- Quick Details Box -->
+              <div class="p-4 rounded-2xl bg-white/70 border border-slate-300/70 space-y-2.5 text-xs text-slate-700">
+                <div class="flex items-center justify-between">
+                  <span class="font-semibold text-slate-500">Corporate Advisory:</span>
+                  <span class="font-bold text-emerald-800">GTM &amp; ESG Leadership</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="font-semibold text-slate-500">Global Venturing:</span>
+                  <span class="font-bold text-cyan-800">EXIMCRAFT &bull; ThunderVolt</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="font-semibold text-slate-500">Official Channel:</span>
+                  <span class="font-bold text-slate-900">marketing@eximcraft.com</span>
                 </div>
               </div>
 
-              <!-- Contact Card CTA -->
-              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
-                <div class="text-xs">
-                  <div class="text-slate-400">Direct Inquiries:</div>
-                  <div class="text-white font-medium truncate">muammermubarak@gmail.com</div>
+              <!-- Direct Copy Card -->
+              <div class="p-3.5 rounded-xl bg-slate-100/90 border border-slate-300 flex items-center justify-between">
+                <div class="text-xs truncate pr-2">
+                  <div class="text-[11px] uppercase font-bold text-slate-500">Official Email</div>
+                  <div class="text-slate-900 font-semibold truncate">marketing@eximcraft.com</div>
                 </div>
-                <button onclick="copyEmail()" class="text-xs px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700 transition" title="Copy Email">
+                <button onclick="copyEmail()" class="text-xs px-3 py-2 bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 rounded-lg border border-slate-300 transition shadow-sm font-semibold flex items-center gap-1.5" title="Copy Email">
                   <i id="copyIcon" class="fa-regular fa-copy"></i>
+                  <span>Copy</span>
                 </button>
               </div>
 
-              <a href="https://www.linkedin.com/in/muammer-mubarak-anik" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 transition-colors">
-                <i class="fa-brands fa-linkedin text-blue-400 text-sm"></i>
-                Verify LinkedIn Executive Profile
+              <a href="https://linkedin.com/in/muammer-mubarak-anik" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold text-slate-900 hover:text-white bg-white hover:bg-slate-900 border border-slate-300 shadow-sm transition-all">
+                <i class="fa-brands fa-linkedin text-blue-600 text-sm"></i>
+                Connect on LinkedIn
               </a>
             </div>
           </div>
@@ -237,45 +258,150 @@
   </section>
 
 
-  <!-- ==================== METRIC COUNTERS STRIP ==================== -->
-  <section class="py-12 border-y border-brand-border bg-slate-900/50 relative z-10">
+  <!-- ==================== STRATEGIC FOCUS PILLARS ==================== -->
+  <section id="focus" class="py-12 border-y border-white/60 bg-white/40 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800">Core Advisory Expertise</span>
+        <h2 class="font-display text-2xl font-extrabold text-slate-950 mt-1">Strategic Focus Pillars</h2>
+      </div>
+
+      <!-- 8 Pillars Capability Badges / Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4">
         
+        <div class="glass-pill p-4 rounded-2xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-diagram-project"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-950">GTM Architecture</div>
+            <div class="text-[11px] text-slate-600">Product-Market Fit &amp; Scale</div>
+          </div>
+        </div>
+
+        <div class="glass-pill p-4 rounded-2xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-600/10 text-cyan-700 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-charging-station"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-950">EV &amp; Clean Mobility</div>
+            <div class="text-[11px] text-slate-600">Battery-Swap Infrastructure</div>
+          </div>
+        </div>
+
+        <div class="glass-pill p-4 rounded-2xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-950">ESG Strategy</div>
+            <div class="text-[11px] text-slate-600">Global Standards &amp; Exports</div>
+          </div>
+        </div>
+
+        <div class="glass-pill p-4 rounded-2xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-600/10 text-cyan-700 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-950">Sales SOP Design</div>
+            <div class="text-[11px] text-slate-600">Repeatable B2B Playbooks</div>
+          </div>
+        </div>
+
+        <div class="glass-pill p-4 rounded-2xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-950">Brand Building</div>
+            <div class="text-[11px] text-slate-600">Category Design &amp; Equity</div>
+          </div>
+        </div>
+
+        <div class="glass-pill p-4 rounded-2xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-600/10 text-cyan-700 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-950">Content Services</div>
+            <div class="text-[11px] text-slate-600">High-Converting Narrative</div>
+          </div>
+        </div>
+
+        <div class="glass-pill p-4 rounded-2xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-950">Training Resources</div>
+            <div class="text-[11px] text-slate-600">Curriculums &amp; Toolkits</div>
+          </div>
+        </div>
+
+        <div class="glass-pill p-4 rounded-2xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-600/10 text-cyan-700 flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-950">Marketing Services</div>
+            <div class="text-[11px] text-slate-600">Omnichannel 150+ Frameworks</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== METRIC COUNTERS STRIP ==================== -->
+  <section class="py-14 border-b border-white/60 bg-white/60 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+
         <!-- Metric 1 -->
-        <div class="space-y-2 text-center lg:text-left">
-          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white flex items-center justify-center lg:justify-start">
+        <div class="space-y-1.5">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 flex items-center justify-center">
             <span class="counter" data-target="200">0</span><span>%+</span>
           </div>
-          <div class="text-xs uppercase tracking-wider font-semibold text-brand-accentLight">Revenue Growth</div>
-          <p class="text-xs text-slate-400">Scaled Walton Chemical from R&D to market leader</p>
+          <div class="text-xs uppercase tracking-wider font-bold text-emerald-800">Revenue Growth</div>
+          <p class="text-xs text-slate-600 font-medium">Walton Chemical Industries GTM scale</p>
         </div>
 
         <!-- Metric 2 -->
-        <div class="space-y-2 text-center lg:text-left">
-          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white flex items-center justify-center lg:justify-start">
+        <div class="space-y-1.5">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 flex items-center justify-center">
             <span class="counter" data-target="5000">0</span><span>+</span>
           </div>
-          <div class="text-xs uppercase tracking-wider font-semibold text-brand-cyan">Leaders Trained</div>
-          <p class="text-xs text-slate-400">Students & managers across APAC in GTM & policy</p>
+          <div class="text-xs uppercase tracking-wider font-bold text-cyan-800">Leaders Trained</div>
+          <p class="text-xs text-slate-600 font-medium">Students &amp; professionals across APAC</p>
         </div>
 
         <!-- Metric 3 -->
-        <div class="space-y-2 text-center lg:text-left">
-          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white flex items-center justify-center lg:justify-start">
+        <div class="space-y-1.5">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 flex items-center justify-center">
             <span class="counter" data-target="40">0</span><span>+</span>
           </div>
-          <div class="text-xs uppercase tracking-wider font-semibold text-brand-accentLight">Export Markets</div>
-          <p class="text-xs text-slate-400">Global footprint for 100% biodegradable exports</p>
+          <div class="text-xs uppercase tracking-wider font-bold text-emerald-800">Export Markets</div>
+          <p class="text-xs text-slate-600 font-medium">EXIMCRAFT 100% biodegradable exports</p>
         </div>
 
         <!-- Metric 4 -->
-        <div class="space-y-2 text-center lg:text-left">
-          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white flex items-center justify-center lg:justify-start">
-            <span class="counter" data-target="2">0</span><span>x</span>
+        <div class="space-y-1.5">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 flex items-center justify-center">
+            <span>2025</span>
           </div>
-          <div class="text-xs uppercase tracking-wider font-semibold text-brand-gold">Global Startup Laurels</div>
-          <p class="text-xs text-slate-400">Web Summit Alpha/Impact & SDG Brand Champion</p>
+          <div class="text-xs uppercase tracking-wider font-bold text-cyan-800">Web Summit</div>
+          <p class="text-xs text-slate-600 font-medium">Alpha &amp; Impact Startup Honoree</p>
+        </div>
+
+        <!-- Metric 5 -->
+        <div class="space-y-1.5 col-span-2 lg:col-span-1">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-amber-600 flex items-center justify-center">
+            <span>2024</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider font-bold text-amber-800">SDG Brand Champion</div>
+          <p class="text-xs text-slate-600 font-medium">Awarded by Bangladesh Brand Forum</p>
         </div>
 
       </div>
@@ -286,129 +412,129 @@
   <!-- ==================== EXECUTIVE WORKSHOP MODULES ==================== -->
   <section id="workshops" class="py-24 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <!-- Section Header -->
-      <div class="max-w-3xl mb-16 space-y-4">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-800 text-brand-accentLight text-xs font-semibold tracking-wide border border-slate-700">
-          <i class="fa-solid fa-graduation-cap"></i> Enterprise Masterclasses & Corporate Coaching
+      <div class="max-w-3xl mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/80 text-emerald-800 text-xs font-bold tracking-wide border border-white shadow-sm">
+          <i class="fa-solid fa-graduation-cap"></i> Enterprise Masterclasses &amp; Corporate Coaching
         </div>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Battle-Tested Frameworks for <span class="text-emerald-gradient">High-Growth Teams</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+          Battle-Tested Frameworks for <span class="text-emerald-gradient">High-Growth Corporate Teams</span>
         </h2>
-        <p class="text-slate-400 text-base leading-relaxed">
-          I conduct private, highly immersive workshops for executive boards, B2B sales teams, and corporate divisions. Every curriculum delivers ready-to-run SOPs, not generic theory.
+        <p class="text-slate-700 text-base leading-relaxed">
+          I conduct private, highly intensive masterclasses for executive boards, corporate sales divisions, and export brand managers. Every program delivers turnkey SOPs and practical implementation kits.
         </p>
       </div>
 
       <!-- Workshop Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
+
         <!-- Module 1 -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
-          <div class="space-y-6">
-            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-brand-accentLight flex items-center justify-center text-xl">
+        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
+          <div class="space-y-5">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center text-xl font-bold">
               <i class="fa-solid fa-chart-line"></i>
             </div>
             <div>
-              <span class="text-xs uppercase tracking-wider text-emerald-400 font-semibold block mb-1">Module 01 &bull; 1-2 Day Intensive</span>
-              <h3 class="font-display text-xl font-bold text-white">B2B Technical Sales & GTM Architecture</h3>
+              <span class="text-xs uppercase tracking-wider text-emerald-800 font-extrabold block mb-1">Module 01 &bull; 1-2 Day Intensive</span>
+              <h3 class="font-display text-xl font-bold text-slate-950">B2B Technical Sales SOPs &amp; GTM Architecture</h3>
             </div>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              Equip your corporate sales team with repeatable SOPs to penetrate multi-stakeholder corporate accounts, build technical value propositions, and reduce pipeline velocity cycles.
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Drawn from scaling Walton Chemical from zero to 200% growth. Equip corporate business development teams with rigorous repeatable SOPs to close multi-stakeholder enterprise accounts and protect collection margins.
             </p>
-            <ul class="space-y-2.5 text-xs text-slate-300">
+            <ul class="space-y-2.5 text-xs text-slate-700 font-medium">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                <span>Building repeatable sales playbooks & hiring organograms</span>
+                <i class="fa-solid fa-check text-emerald-700 mt-0.5"></i>
+                <span>Building repeatable technical sales playbooks &amp; organograms</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                <span>Enterprise client acquisition in syndicated/import markets</span>
+                <i class="fa-solid fa-check text-emerald-700 mt-0.5"></i>
+                <span>B2B key account acquisition across 100+ factory distribution networks</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                <span>Contract negotiation, collection ratios & P&L ownership</span>
+                <i class="fa-solid fa-check text-emerald-700 mt-0.5"></i>
+                <span>Contract negotiation, collection ratios (70%+), and P&amp;L ownership</span>
               </li>
             </ul>
           </div>
 
-          <div class="pt-8 mt-6 border-t border-slate-800">
-            <a href="#booking" onclick="preselectWorkshop('B2B Technical Sales SOPs & GTM Architecture')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-brand-accent hover:text-brand-dark transition-all">
-              <span>Book This Workshop</span>
+          <div class="pt-8 mt-6 border-t border-slate-300/60">
+            <a href="#booking" onclick="preselectWorkshop('B2B Technical Sales SOPs & GTM Architecture')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs uppercase tracking-wider font-bold text-slate-900 bg-white hover:bg-emerald-600 hover:text-white border border-slate-300 shadow-sm transition-all">
+              <span>Book This Masterclass</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
 
         <!-- Module 2 -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between border-emerald-500/30">
-          <div class="space-y-6">
-            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-brand-cyan flex items-center justify-center text-xl">
+        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border-2 border-emerald-600/40">
+          <div class="space-y-5">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-600/10 text-cyan-700 flex items-center justify-center text-xl font-bold">
               <i class="fa-solid fa-bullseye"></i>
             </div>
             <div>
-              <span class="text-xs uppercase tracking-wider text-cyan-400 font-semibold block mb-1">Module 02 &bull; 4-Week Cohort / 1-Day</span>
-              <h3 class="font-display text-xl font-bold text-white">Applied Brand Positioning & Conversion Marketing</h3>
+              <span class="text-xs uppercase tracking-wider text-cyan-800 font-extrabold block mb-1">Module 02 &bull; 4-Week Cohort / 1-Day</span>
+              <h3 class="font-display text-xl font-bold text-slate-950">Applied Brand Positioning &amp; Conversion Marketing</h3>
             </div>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              Based on the 150+ marketing methodology curriculum taught at Shikkha. Unpack behavioral economics, magnetic messaging hooks, and full-funnel conversion strategies.
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Based on the 150+ marketing methodology curriculum taught at Shikkha. Decode consumer psychology, cognitive buying triggers, and craft magnetic brand positioning for competitive APAC markets.
             </p>
-            <ul class="space-y-2.5 text-xs text-slate-300">
+            <ul class="space-y-2.5 text-xs text-slate-700 font-medium">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
-                <span>Marketing as Science: Positioning and category design</span>
+                <i class="fa-solid fa-check text-cyan-700 mt-0.5"></i>
+                <span>Marketing as Science: Category design &amp; defensible positioning</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
-                <span>Consumer psychology & cognitive purchase decision drivers</span>
+                <i class="fa-solid fa-check text-cyan-700 mt-0.5"></i>
+                <span>Cognitive triggers &amp; consumer purchase behavior breakdown</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
-                <span>Omnichannel execution: ABM, ATL, BTL & High-ROI Copy</span>
+                <i class="fa-solid fa-check text-cyan-700 mt-0.5"></i>
+                <span>Omnichannel execution: ABM, ATL, BTL &amp; High-ROI Conversion Copy</span>
               </li>
             </ul>
           </div>
 
-          <div class="pt-8 mt-6 border-t border-slate-800">
-            <a href="#booking" onclick="preselectWorkshop('Applied Brand Positioning & Conversion Marketing')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-brand-dark bg-brand-accent hover:bg-brand-accentLight transition-all">
-              <span>Book This Workshop</span>
+          <div class="pt-8 mt-6 border-t border-slate-300/60">
+            <a href="#booking" onclick="preselectWorkshop('Applied Brand Positioning & Conversion Marketing')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs uppercase tracking-wider font-bold text-white bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 shadow-md transition-all">
+              <span>Book This Masterclass</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
 
         <!-- Module 3 -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
-          <div class="space-y-6">
-            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-brand-accentLight flex items-center justify-center text-xl">
+        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
+          <div class="space-y-5">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center text-xl font-bold">
               <i class="fa-solid fa-leaf"></i>
             </div>
             <div>
-              <span class="text-xs uppercase tracking-wider text-emerald-400 font-semibold block mb-1">Module 03 &bull; Executive Session</span>
-              <h3 class="font-display text-xl font-bold text-white">Sustainable Innovation & ESG Venture Leadership</h3>
+              <span class="text-xs uppercase tracking-wider text-emerald-800 font-extrabold block mb-1">Module 03 &bull; Executive Session</span>
+              <h3 class="font-display text-xl font-bold text-slate-950">Sustainable Innovation &amp; ESG Venture Leadership</h3>
             </div>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              Prepare corporate enterprises and exporters for global ESG standards, carbon compliance, circular supply chain transitions, and international climate finance partnerships.
+            <p class="text-slate-700 text-sm leading-relaxed">
+              Equip exporters, corporates, and impact ventures to navigate international ESG mandates, clean mobility transitions, and circular packaging requirements across European and North American buyers.
             </p>
-            <ul class="space-y-2.5 text-xs text-slate-300">
+            <ul class="space-y-2.5 text-xs text-slate-700 font-medium">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                <span>Transforming ESG compliance into revenue generators</span>
+                <i class="fa-solid fa-check text-emerald-700 mt-0.5"></i>
+                <span>Transforming ESG compliance into tangible enterprise revenue</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                <span>Clean mobility & circular packaging business model canvas</span>
+                <i class="fa-solid fa-check text-emerald-700 mt-0.5"></i>
+                <span>Electric vehicle swapping infrastructure &amp; clean mobility economics</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
-                <span>Navigating global buyer ESG standards (Europe, US & APAC)</span>
+                <i class="fa-solid fa-check text-emerald-700 mt-0.5"></i>
+                <span>International buyer qualification in 40+ conscious export destinations</span>
               </li>
             </ul>
           </div>
 
-          <div class="pt-8 mt-6 border-t border-slate-800">
-            <a href="#booking" onclick="preselectWorkshop('Sustainable Innovation & ESG Venture Leadership')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-brand-accent hover:text-brand-dark transition-all">
-              <span>Book This Workshop</span>
+          <div class="pt-8 mt-6 border-t border-slate-300/60">
+            <a href="#booking" onclick="preselectWorkshop('Sustainable Innovation & ESG Venture Leadership')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs uppercase tracking-wider font-bold text-slate-900 bg-white hover:bg-emerald-600 hover:text-white border border-slate-300 shadow-sm transition-all">
+              <span>Book This Masterclass</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
@@ -420,93 +546,91 @@
 
 
   <!-- ==================== TRACK RECORD / VENTURES ==================== -->
-  <section id="ventures" class="py-24 bg-slate-900/40 border-t border-brand-border relative z-10">
+  <section id="ventures" class="py-24 bg-white/40 border-t border-white/60 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-800 text-brand-cyan text-xs font-semibold tracking-wide border border-slate-700">
-          <i class="fa-solid fa-briefcase"></i> Real Venture Building Experience
-        </div>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Tested in High-Complexity, High-Stakes Markets
+
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-800">Real Execution Record</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-950">
+          Proven Leadership in High-Complexity Markets
         </h2>
-        <p class="text-slate-400 text-base">
-          Proven execution across conglomerates, cleantech infrastructure, cross-border trade, and digital ecosystems.
+        <p class="text-slate-700 text-base">
+          From conglomerate spin-offs to clean mobility networks and cross-border biodegradable exports.
         </p>
       </div>
 
       <!-- Case Study Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- Case 1: Walton Chemical -->
-        <div class="glass-card rounded-2xl p-8 space-y-4">
+
+        <!-- Case 1: EXIMCRAFT -->
+        <div class="glass-card rounded-3xl p-8 space-y-4">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Conglomerate Scale-Up</span>
-            <span class="text-xs text-slate-400">2019 - 2021</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">Global ESG Export Platform</span>
+            <span class="text-xs text-slate-500 font-semibold">2026 - Present</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Walton Chemical Industries Ltd</h3>
-          <p class="text-xs text-brand-accentLight font-semibold">Founding Team Member & Head of Sales / Business Development</p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Scaled the enterprise from pure R&D to full Go-To-Market and sustainable product-market fit. Built an industry-specialized technical sales force from zero, mapped nationwide import channels across 100+ factories, and delivered <strong class="text-white">200% revenue growth</strong> while maintaining a 70%+ cash collection ratio.
+          <h3 class="font-display text-2xl font-bold text-slate-950">EXIMCRAFT</h3>
+          <p class="text-xs text-emerald-800 font-bold uppercase tracking-wider">Co-Founder &amp; CMO</p>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Shaping the brand narrative and go-to-market pipeline targeting the $88B+ biodegradable products industry. Uniting 3 artisan production hubs across Bangladesh to supply 100% biodegradable plastic alternatives to conscious retail buyers and private-label partners across 40+ countries.
           </p>
-          <div class="pt-4 flex flex-wrap gap-2 text-xs">
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Organogram & SOP Design</span>
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">B2B Channel Strategy</span>
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">200% Growth</span>
+          <div class="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Cross-Border B2B</span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">ESG Sourcing</span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Global Category Narrative</span>
           </div>
         </div>
 
         <!-- Case 2: ThunderVolt -->
-        <div class="glass-card rounded-2xl p-8 space-y-4">
+        <div class="glass-card rounded-3xl p-8 space-y-4">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-brand-accentLight border border-emerald-500/20">Clean Mobility Tech</span>
-            <span class="text-xs text-slate-400">2023 - Present</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-300">Clean Mobility Tech</span>
+            <span class="text-xs text-slate-500 font-semibold">2023 - Present</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">ThunderVolt</h3>
-          <p class="text-xs text-brand-accentLight font-semibold">Founder & Chief Executive Officer</p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Building Bangladesh’s electric vehicle energy distribution backbone. Spearheading a high-throughput battery-swapping network that reduces operational expenditure by 40% and cuts driver downtime from hours of slow charging to under 2 minutes, driving national decarbonization and SME mobility empowerment.
+          <h3 class="font-display text-2xl font-bold text-slate-950">ThunderVolt</h3>
+          <p class="text-xs text-cyan-800 font-bold uppercase tracking-wider">Founder &amp; CEO</p>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Leading the transformation of Bangladesh's commercial transport and logistics into a zero-emission ecosystem. Built a scalable battery-swapping network that slashes operating costs by 40% and replaces multi-hour charging bottlenecks with rapid 2-minute battery swaps.
           </p>
-          <div class="pt-4 flex flex-wrap gap-2 text-xs">
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">EV Swapping Infrastructure</span>
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Investor Relations</span>
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Public-Private Partnerships</span>
+          <div class="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Battery Swapping</span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Public-Private Partnerships</span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Decarbonization</span>
           </div>
         </div>
 
-        <!-- Case 3: EXIMCRAFT -->
-        <div class="glass-card rounded-2xl p-8 space-y-4">
+        <!-- Case 3: Walton Chemical Industries -->
+        <div class="glass-card rounded-3xl p-8 space-y-4">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Global ESG Export</span>
-            <span class="text-xs text-slate-400">2026 - Present</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 text-blue-800 border border-blue-300">Conglomerate Scale-Up</span>
+            <span class="text-xs text-slate-500 font-semibold">2019 - 2021</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">EXIMCRAFT</h3>
-          <p class="text-xs text-brand-accentLight font-semibold">Co-Founder & Chief Marketing Officer</p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Leading the go-to-market narrative and international buyer pipelines targeting the $88B+ global sustainable products market. Connecting 3 regional artisan hubs producing 100% biodegradable plastic alternatives with conscious retail chains and ESG buyers across 40+ countries.
+          <h3 class="font-display text-2xl font-bold text-slate-950">Walton Chemical Industries Ltd</h3>
+          <p class="text-xs text-blue-900 font-bold uppercase tracking-wider">Founding Team &amp; Head of Sales / Business Development</p>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Transitioned the new division from R&amp;D stage into an aggressive Go-To-Market phase. Formulated functional organograms, instituted rigorous sales SOPs, recruited a specialized technical sales force from scratch, and achieved 200% revenue growth with 70%+ steady cash collection.
           </p>
-          <div class="pt-4 flex flex-wrap gap-2 text-xs">
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Cross-Border B2B</span>
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">ESG Supply Chains</span>
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Global Brand Narrative</span>
+          <div class="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">200% Revenue Scale</span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Zero-to-One BD Team</span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">100+ Factories Network</span>
           </div>
         </div>
 
-        <!-- Case 4: Strategic Advisory (Mulytic Energy & Junction) -->
-        <div class="glass-card rounded-2xl p-8 space-y-4">
+        <!-- Case 4: Junction Bangladesh & Mulytic Energy -->
+        <div class="glass-card rounded-3xl p-8 space-y-4">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">Ecosystem & Capital</span>
-            <span class="text-xs text-slate-400">Ongoing</span>
+            <span class="text-xs font-bold px-3 py-1 rounded-full bg-purple-100 text-purple-800 border border-purple-300">Incubation &amp; Advisory</span>
+            <span class="text-xs text-slate-500 font-semibold">Active Engagements</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Ecosystem Incubation & Advisory</h3>
-          <p class="text-xs text-brand-accentLight font-semibold">Fellow at Junction BD &bull; Strategic Advisor at Mulytic Energy</p>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Advising Mulytic Energy board on fundraising pipelines leading to Web Summit recognition. Leading strategic programs and venture incubation at Junction BD to turn homegrown social and tech innovations into globally viable, scaleable businesses.
+          <h3 class="font-display text-2xl font-bold text-slate-950">Junction BD &amp; Mulytic Energy</h3>
+          <p class="text-xs text-purple-900 font-bold uppercase tracking-wider">Fellow (Junction) &bull; Strategic Advisor (Mulytic)</p>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Advise the Mulytic Energy board on capital raising and investor pipeline development (recognized as Alpha &amp; Impact startup at Web Summit 2025). Direct strategy, incubation programs, and startup ecosystem linkages at Junction BD to scale homegrown ventures globally.
           </p>
-          <div class="pt-4 flex flex-wrap gap-2 text-xs">
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Incubation Architecture</span>
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Venture Fundraising</span>
-            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Angel Ecosystem</span>
+          <div class="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Web Summit 2025</span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Venture Incubation</span>
+            <span class="px-3 py-1 rounded-lg bg-white border border-slate-300 text-slate-800">Investor Pipelines</span>
           </div>
         </div>
 
@@ -516,51 +640,51 @@
 
 
   <!-- ==================== HONORS & RECOGNITION ==================== -->
-  <section id="achievements" class="py-20 border-t border-brand-border relative z-10">
+  <section id="achievements" class="py-20 border-t border-white/60 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white">
-          Awards & Industry Recognition
+
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-800">Accreditations &amp; Honours</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-950">
+          Recognized by Premier Industry Institutions
         </h2>
-        <p class="text-slate-400 text-sm">Recognized by premier global and national platforms for impactful venture leadership.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
+
         <!-- Award 1 -->
-        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
-          <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 text-xl shrink-0">
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <div class="p-3.5 rounded-2xl bg-amber-500/10 text-amber-600 text-2xl shrink-0">
             <i class="fa-solid fa-trophy"></i>
           </div>
           <div>
-            <h4 class="font-display font-bold text-white text-base">SDG Brand Champion Award</h4>
-            <p class="text-xs text-brand-accentLight mt-0.5">Bangladesh Brand Forum &bull; 2024</p>
-            <p class="text-slate-400 text-xs mt-2 leading-relaxed">Honored for strategic brand leadership in sustainable and clean mobility transformation.</p>
+            <h4 class="font-display font-bold text-slate-950 text-base">SDG Brand Champion Award</h4>
+            <p class="text-xs text-amber-800 font-bold mt-0.5">Bangladesh Brand Forum &bull; 2024</p>
+            <p class="text-slate-600 text-xs mt-2 leading-relaxed font-medium">Honored for strategic brand leadership in sustainable transportation and clean mobility ecosystem creation.</p>
           </div>
         </div>
 
         <!-- Award 2 -->
-        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
-          <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 text-xl shrink-0">
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <div class="p-3.5 rounded-2xl bg-cyan-500/10 text-cyan-600 text-2xl shrink-0">
             <i class="fa-solid fa-earth-americas"></i>
           </div>
           <div>
-            <h4 class="font-display font-bold text-white text-base">ALPHA & IMPACT Startup</h4>
-            <p class="text-xs text-cyan-400 mt-0.5">Web Summit &bull; 2025</p>
-            <p class="text-slate-400 text-xs mt-2 leading-relaxed">Dual global recognition for strategic market expansion and sustainable cleantech innovation.</p>
+            <h4 class="font-display font-bold text-slate-950 text-base">ALPHA &amp; IMPACT Startup</h4>
+            <p class="text-xs text-cyan-800 font-bold mt-0.5">Web Summit &bull; 2025</p>
+            <p class="text-slate-600 text-xs mt-2 leading-relaxed font-medium">Dual global recognition for strategic market expansion, innovative technology, and clean energy impact.</p>
           </div>
         </div>
 
         <!-- Award 3 -->
-        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
-          <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 text-xl shrink-0">
-            <i class="fa-solid fa-charging-station"></i>
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-4">
+          <div class="p-3.5 rounded-2xl bg-emerald-500/10 text-emerald-600 text-2xl shrink-0">
+            <i class="fa-solid fa-award"></i>
           </div>
           <div>
-            <h4 class="font-display font-bold text-white text-base">Best Clean Mobility Startup</h4>
-            <p class="text-xs text-emerald-400 mt-0.5">Clean Energy Week &bull; 2025</p>
-            <p class="text-slate-400 text-xs mt-2 leading-relaxed">Recognized for rapid electric mobility infrastructure scale and decentralized energy storage.</p>
+            <h4 class="font-display font-bold text-slate-950 text-base">Best Clean Mobility Startup</h4>
+            <p class="text-xs text-emerald-800 font-bold mt-0.5">Bangladesh Clean Energy Week &bull; 2025</p>
+            <p class="text-slate-600 text-xs mt-2 leading-relaxed font-medium">Awarded for high-efficiency battery swapping and rapid decarbonization infrastructure delivery.</p>
           </div>
         </div>
 
@@ -569,93 +693,92 @@
   </section>
 
 
-  <!-- ==================== ABOUT & CREDENTIALS ==================== -->
-  <section id="about" class="py-20 bg-slate-900/30 border-t border-brand-border relative z-10">
+  <!-- ==================== EXECUTIVE PROFILE & BACKGROUND ==================== -->
+  <section id="about" class="py-20 bg-white/40 border-t border-white/60 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-brand-accentLight text-xs font-semibold tracking-wide border border-slate-700">
+
+        <div class="lg:col-span-6 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-emerald-800 text-xs font-bold tracking-wide border border-white shadow-sm">
             <i class="fa-solid fa-user-tie"></i> Executive Profile
           </div>
-          <h2 class="font-display text-3xl font-extrabold text-white">
-            Driven by Purpose. Grounded in Execution.
+          <h2 class="font-display text-3xl font-extrabold text-slate-950">
+            Strategic Clarity Grounded in Operational Realities
           </h2>
-          <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+          <div class="space-y-4 text-slate-700 text-sm leading-relaxed">
             <p>
-              I bridge boardroom strategy and operational ground reality. Over the past decade, my work has spanned renewable energy, electric vehicle infrastructure, petrochemical B2B distribution, fintech wallets (ShopUp/PayWell), and nationwide social movements.
+              I bridge boardroom strategy, capital structuring, and front-line operational rigor. Over the last decade, I have operated in high-complexity sectors including petrochemical manufacturing, fintech platforms (ShopUp PayWell cash collection), electric mobility infrastructure, and global ESG export platforms.
             </p>
             <p>
-              Beyond commercial ventures, I built programs at <strong>Let's Talk Mental Health (LTMH)</strong> reaching 40,000+ school students and 16,500+ corporate employees across Bangladesh, recognized by the Bill & Melinda Gates Foundation and Diana Award.
+              Committed to social impact, I served as a Board Member and built programs at <strong>Let's Talk Mental Health (LTMH)</strong> reaching 40,000+ school students and 16,500+ corporate employees across Bangladesh, recognized by the Bill &amp; Melinda Gates Foundation and the Diana Award.
             </p>
           </div>
 
-          <!-- Academic & Certs Badges -->
-          <div class="pt-4 border-t border-slate-800 grid grid-cols-2 gap-4 text-xs">
+          <!-- Academic & Certifications Summary -->
+          <div class="pt-4 border-t border-slate-300/80 grid grid-cols-2 gap-4 text-xs">
             <div>
-              <span class="text-slate-400 block font-medium">Education</span>
-              <strong class="text-white block mt-0.5">North South University</strong>
-              <span class="text-slate-400">B.B.A. Marketing (2012-2016)</span>
+              <span class="text-slate-500 block font-bold uppercase tracking-wider text-[11px]">Academic Foundation</span>
+              <strong class="text-slate-900 block mt-0.5">North South University</strong>
+              <span class="text-slate-600">B.B.A., Marketing (2012-2016)</span>
             </div>
             <div>
-              <span class="text-slate-400 block font-medium">Executive Certificate</span>
-              <strong class="text-white block mt-0.5">Harvard Business School Online</strong>
-              <span class="text-slate-400">Entrepreneurship Essentials</span>
+              <span class="text-slate-500 block font-bold uppercase tracking-wider text-[11px]">Executive Credential</span>
+              <strong class="text-slate-900 block mt-0.5">Harvard Business School Online</strong>
+              <span class="text-slate-600">Entrepreneurship Essentials</span>
             </div>
           </div>
         </div>
 
         <div class="lg:col-span-6">
-          <div class="rounded-2xl glass-card p-8 border border-slate-800 space-y-6">
-            <h3 class="font-display font-bold text-lg text-white flex items-center gap-2">
-              <i class="fa-solid fa-check-double text-brand-accent"></i> Core Executive Competencies
+          <div class="rounded-3xl glass-card p-8 border border-white/90 space-y-6">
+            <h3 class="font-display font-bold text-lg text-slate-950 flex items-center gap-2">
+              <i class="fa-solid fa-layer-group text-emerald-700"></i> Advisory Competency Index
             </h3>
-            
+
             <div class="space-y-4 text-xs">
               <div>
-                <div class="flex justify-between text-slate-300 mb-1.5 font-medium">
-                  <span>B2B GTM Strategy & Sales SOP Design</span>
-                  <span class="text-brand-accentLight">98%</span>
+                <div class="flex justify-between text-slate-800 mb-1.5 font-bold">
+                  <span>B2B Sales SOPs &amp; Industrial GTM Architecture</span>
+                  <span class="text-emerald-700">98%</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                  <div class="bg-gradient-to-r from-brand-accent to-brand-cyan h-full w-[98%]"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-slate-300 mb-1.5 font-medium">
-                  <span>Brand Positioning & Behavioral Messaging</span>
-                  <span class="text-brand-accentLight">95%</span>
-                </div>
-                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                  <div class="bg-gradient-to-r from-brand-accent to-brand-cyan h-full w-[95%]"></div>
+                <div class="w-full bg-slate-300/80 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-600 to-cyan-600 h-full w-[98%]"></div>
                 </div>
               </div>
 
               <div>
-                <div class="flex justify-between text-slate-300 mb-1.5 font-medium">
-                  <span>CleanTech & EV Infrastructure Economics</span>
-                  <span class="text-brand-accentLight">92%</span>
+                <div class="flex justify-between text-slate-800 mb-1.5 font-bold">
+                  <span>Applied Brand Positioning &amp; 150+ Frameworks</span>
+                  <span class="text-emerald-700">95%</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                  <div class="bg-gradient-to-r from-brand-accent to-brand-cyan h-full w-[92%]"></div>
+                <div class="w-full bg-slate-300/80 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-600 to-cyan-600 h-full w-[95%]"></div>
                 </div>
               </div>
 
               <div>
-                <div class="flex justify-between text-slate-300 mb-1.5 font-medium">
-                  <span>Corporate Training & Facilitation</span>
-                  <span class="text-brand-accentLight">96%</span>
+                <div class="flex justify-between text-slate-800 mb-1.5 font-bold">
+                  <span>CleanTech &amp; EV Swapping Infrastructure Economics</span>
+                  <span class="text-emerald-700">92%</span>
                 </div>
-                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                  <div class="bg-gradient-to-r from-brand-accent to-brand-cyan h-full w-[96%]"></div>
+                <div class="w-full bg-slate-300/80 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-600 to-cyan-600 h-full w-[92%]"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-slate-800 mb-1.5 font-bold">
+                  <span>Executive Corporate Training &amp; Facilitation</span>
+                  <span class="text-emerald-700">96%</span>
+                </div>
+                <div class="w-full bg-slate-300/80 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-600 to-cyan-600 h-full w-[96%]"></div>
                 </div>
               </div>
             </div>
 
-            <!-- Quote/Philosophy -->
-            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 italic text-slate-300 text-xs leading-relaxed">
-              &ldquo;Great strategies are meaningless without the operational architecture and frontline coaching required to execute them every single day.&rdquo;
+            <div class="p-4 rounded-2xl bg-white/80 border border-slate-300 text-slate-700 text-xs italic leading-relaxed">
+              &ldquo;Sustainable profitability is built when clear brand narratives, repeatable front-line sales SOPs, and measurable ESG principles operate as a single system.&rdquo;
             </div>
           </div>
         </div>
@@ -665,67 +788,67 @@
   </section>
 
 
-  <!-- ==================== BOOKING & CONTACT SECTION ==================== -->
-  <section id="booking" class="py-24 border-t border-brand-border relative z-10">
+  <!-- ==================== BOOKING & INQUIRY SECTION ==================== -->
+  <section id="booking" class="py-24 border-t border-white/60 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
+
         <!-- Left: Context & Booking Details -->
         <div class="lg:col-span-5 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-brand-accentLight text-xs font-semibold tracking-wide border border-slate-700">
-            <i class="fa-regular fa-clock"></i> Consultations & Bookings
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-emerald-800 text-xs font-bold tracking-wide border border-white shadow-sm">
+            <i class="fa-regular fa-clock"></i> Executive Inquiries &amp; Advisory
           </div>
-          
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Let's Build Your <span class="text-emerald-gradient">Growth Engine</span>
+
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+            Initiate an Advisory or <span class="text-emerald-gradient">Masterclass Engagement</span>
           </h2>
 
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Whether you are looking to train your corporate business development team, formulate an export GTM strategy, or advise on cleantech venture scale, get in touch directly.
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Reach out directly for corporate masterclasses, B2B sales playbook architecture, clean mobility advisory, or international ESG sourcing consultations.
           </p>
 
           <!-- Contact items list -->
           <div class="space-y-4 pt-2">
-            <div class="flex items-center gap-4 text-sm text-slate-300">
-              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-accent text-base border border-slate-700 shrink-0">
+            <div class="flex items-center gap-4 text-sm text-slate-800">
+              <div class="w-11 h-11 rounded-2xl bg-white flex items-center justify-center text-emerald-700 text-lg border border-slate-300 shrink-0 shadow-sm">
                 <i class="fa-solid fa-envelope"></i>
               </div>
               <div>
-                <div class="text-xs text-slate-400 font-medium">Direct Email</div>
-                <a href="mailto:muammermubarak@gmail.com" class="text-white hover:text-brand-accent transition-colors font-medium">muammermubarak@gmail.com</a>
+                <div class="text-[11px] uppercase tracking-wider text-slate-500 font-bold">Official Email</div>
+                <a href="mailto:marketing@eximcraft.com" class="text-slate-950 hover:text-emerald-700 transition-colors font-bold">marketing@eximcraft.com</a>
               </div>
             </div>
 
-            <div class="flex items-center gap-4 text-sm text-slate-300">
-              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-cyan text-base border border-slate-700 shrink-0">
+            <div class="flex items-center gap-4 text-sm text-slate-800">
+              <div class="w-11 h-11 rounded-2xl bg-white flex items-center justify-center text-cyan-700 text-lg border border-slate-300 shrink-0 shadow-sm">
                 <i class="fa-solid fa-phone"></i>
               </div>
               <div>
-                <div class="text-xs text-slate-400 font-medium">Direct Phone / WhatsApp</div>
-                <a href="tel:+8801674517466" class="text-white hover:text-brand-cyan transition-colors font-medium">+880 1674 517466</a>
+                <div class="text-[11px] uppercase tracking-wider text-slate-500 font-bold">Phone / WhatsApp</div>
+                <a href="tel:+8801674517466" class="text-slate-950 hover:text-cyan-700 transition-colors font-bold">+880 1674517466</a>
               </div>
             </div>
 
-            <div class="flex items-center gap-4 text-sm text-slate-300">
-              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-accentLight text-base border border-slate-700 shrink-0">
-                <i class="fa-solid fa-map-pin"></i>
+            <div class="flex items-center gap-4 text-sm text-slate-800">
+              <div class="w-11 h-11 rounded-2xl bg-white flex items-center justify-center text-emerald-700 text-lg border border-slate-300 shrink-0 shadow-sm">
+                <i class="fa-solid fa-location-dot"></i>
               </div>
               <div>
-                <div class="text-xs text-slate-400 font-medium">Location</div>
-                <span class="text-white font-medium">Dhaka, Bangladesh &bull; Available Globally</span>
+                <div class="text-[11px] uppercase tracking-wider text-slate-500 font-bold">Headquarters</div>
+                <span class="text-slate-950 font-bold">Dhaka, Bangladesh &bull; Available Globally</span>
               </div>
             </div>
           </div>
 
           <!-- Schedule via Cal.com Modal Button -->
-          <div class="pt-6">
-            <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-950/40 to-slate-900 border border-emerald-500/30 space-y-3">
-              <h4 class="font-display font-bold text-white text-sm flex items-center gap-2">
-                <i class="fa-regular fa-calendar text-brand-accent"></i> Fast-Track Instant Meeting
+          <div class="pt-4">
+            <div class="p-6 rounded-3xl glass-card border-2 border-emerald-600/30 space-y-3">
+              <h4 class="font-display font-bold text-slate-950 text-sm flex items-center gap-2">
+                <i class="fa-regular fa-calendar text-emerald-700"></i> Instant Executive Calendar
               </h4>
-              <p class="text-xs text-slate-400">Prefer to book directly on the calendar for a 30-min discovery call?</p>
-              <button onclick="openCalModal()" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs uppercase tracking-wider font-bold text-brand-dark bg-brand-accent hover:bg-brand-accentLight transition-colors">
+              <p class="text-xs text-slate-600 leading-relaxed">Schedule a direct 30-minute discovery call via online calendar integration.</p>
+              <button onclick="openCalModal()" class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl text-xs uppercase tracking-wider font-bold text-white bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 shadow-md transition-all">
                 <span>Open Instant Booking Calendar</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
               </button>
@@ -735,48 +858,49 @@
 
         <!-- Right: Inquiry Form with Direct Mailto Dispatcher -->
         <div class="lg:col-span-7">
-          <div class="rounded-2xl glass-card p-8 border border-slate-800">
-            <h3 class="font-display font-bold text-xl text-white mb-2">Send an Advisory RFP or Query</h3>
-            <p class="text-xs text-slate-400 mb-6">Fill in the details below to receive a response within 24 business hours.</p>
+          <div class="rounded-3xl glass-card p-8 border-2 border-white shadow-xl">
+            <h3 class="font-display font-bold text-2xl text-slate-950 mb-1.5">Direct Advisory Inquiry</h3>
+            <p class="text-xs text-slate-600 mb-6 font-medium">Please outline your organization's goals to receive a proposal within 24 business hours.</p>
 
             <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="clientName">Full Name *</label>
-                  <input type="text" id="clientName" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5" for="clientName">Full Name *</label>
+                  <input type="text" id="clientName" required placeholder="e.g. Raisa Sigma" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition shadow-sm">
                 </div>
                 <div>
-                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="clientEmail">Work Email *</label>
-                  <input type="email" id="clientEmail" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5" for="clientEmail">Work Email *</label>
+                  <input type="email" id="clientEmail" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition shadow-sm">
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="clientCompany">Organization / Institution</label>
-                  <input type="text" id="clientCompany" placeholder="Company or University" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5" for="clientCompany">Organization / Firm</label>
+                  <input type="text" id="clientCompany" placeholder="Company, Group, or University" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition shadow-sm">
                 </div>
                 <div>
-                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="serviceSelect">Engagement Type *</label>
-                  <select id="serviceSelect" required class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition">
-                    <option value="Corporate Workshop / Training">Corporate Masterclass / Workshop</option>
-                    <option value="GTM / Sales SOP Advisory">GTM & Sales SOP Advisory</option>
-                    <option value="Cleantech / ESG Strategy">Cleantech & Sustainable Sourcing</option>
-                    <option value="Keynote / Panel Speaking">Keynote / University Lecture</option>
-                    <option value="Other">Other Strategic Opportunity</option>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5" for="serviceSelect">Strategic Area *</label>
+                  <select id="serviceSelect" required class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition shadow-sm">
+                    <option value="Corporate Masterclass & Workshop">Corporate Masterclass &amp; Workshop</option>
+                    <option value="GTM Architecture & Sales SOPs">GTM Architecture &amp; Sales SOPs</option>
+                    <option value="EV & Clean Mobility Strategy">EV &amp; Clean Mobility Strategy</option>
+                    <option value="ESG Export & Sourcing Advisory">ESG Export &amp; Sourcing Advisory</option>
+                    <option value="Brand Positioning & Marketing Services">Brand Positioning &amp; Marketing Services</option>
+                    <option value="Executive Mentorship / Other">Executive Mentorship / Other</option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="clientMessage">Brief Outline of Objectives *</label>
-                <textarea id="clientMessage" rows="4" required placeholder="Describe your team size, timeline, and what specific outcomes you aim to achieve..." class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition"></textarea>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5" for="clientMessage">Project Objectives &amp; Timelines *</label>
+                <textarea id="clientMessage" rows="4" required placeholder="Outline your team size, key objectives, and expected deliverables..." class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition shadow-sm"></textarea>
               </div>
 
-              <div id="formFeedback" class="hidden p-3 rounded-xl text-xs font-medium"></div>
+              <div id="formFeedback" class="hidden p-3.5 rounded-xl text-xs font-semibold"></div>
 
-              <button type="submit" class="w-full py-4 rounded-xl text-sm font-bold text-brand-dark bg-gradient-to-r from-brand-accent to-brand-cyan hover:opacity-95 shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.01]">
-                Transmit Advisory Inquiry
+              <button type="submit" class="w-full py-4 rounded-xl text-xs uppercase tracking-wider font-bold text-white bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 shadow-lg shadow-emerald-700/20 transition-all hover:scale-[1.01]">
+                Transmit RFP to marketing@eximcraft.com
               </button>
             </form>
           </div>
@@ -788,37 +912,36 @@
 
 
   <!-- ==================== CAL.COM / SCHEDULING MODAL ==================== -->
-  <div id="calModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="relative w-full max-w-3xl rounded-2xl bg-brand-surface border border-slate-700 shadow-2xl p-6 sm:p-8 overflow-hidden max-h-[90vh] flex flex-col">
-      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+  <div id="calModal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="relative w-full max-w-2xl rounded-3xl bg-white border border-slate-200 shadow-2xl p-6 sm:p-8 overflow-hidden max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
         <div>
-          <h3 class="font-display font-bold text-lg text-white">Select a Time for Consultation</h3>
-          <p class="text-xs text-slate-400">Direct calendar interface with Muammer Mubarak Anik</p>
+          <h3 class="font-display font-bold text-xl text-slate-950">Book an Executive Consultation</h3>
+          <p class="text-xs text-slate-600 font-medium">Direct calendar interface with Muammer Mubarak Anik</p>
         </div>
-        <button onclick="closeCalModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition">
-          <i class="fa-solid fa-xmark"></i>
+        <button onclick="closeCalModal()" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-950 flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
 
       <div class="py-6 flex-1 overflow-y-auto space-y-6 text-center">
-        <!-- Interactive Cal Placeholder & direct embed instructions -->
-        <div class="p-8 rounded-xl bg-slate-900/90 border border-dashed border-slate-700 space-y-4">
-          <div class="w-16 h-16 rounded-full bg-emerald-500/10 text-brand-accentLight mx-auto flex items-center justify-center text-2xl">
-            <i class="fa-solid fa-calendar-days"></i>
+        <div class="p-8 rounded-2xl bg-slate-50 border border-dashed border-slate-300 space-y-4">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center text-3xl shadow-sm">
+            <i class="fa-solid fa-calendar-check"></i>
           </div>
-          <h4 class="font-display font-semibold text-white text-base">Cal.com / Calendly Integration Ready</h4>
-          <p class="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
-            To make this active 100% free forever: Create an account on <a href="https://cal.com" target="_blank" class="text-brand-accent underline">Cal.com</a> or <a href="https://calendly.com" target="_blank" class="text-brand-cyan underline">Calendly</a>, and insert your personal booking URL below.
+          <h4 class="font-display font-bold text-slate-950 text-lg">Instant Advisory Calendar Ready</h4>
+          <p class="text-xs text-slate-600 max-w-md mx-auto leading-relaxed font-medium">
+            Link your preferred free scheduler (e.g. <a href="https://cal.com" target="_blank" class="text-emerald-700 font-bold underline">Cal.com</a> or <a href="https://calendly.com" target="_blank" class="text-cyan-700 font-bold underline">Calendly</a>) by replacing the link below with your calendar handle.
           </p>
           <div class="pt-2">
-            <a id="externalCalLink" href="https://cal.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-accent text-brand-dark font-bold text-xs uppercase tracking-wider hover:opacity-90 transition">
-              Open Calendar in New Tab <i class="fa-solid fa-external-link text-xs"></i>
+            <a id="externalCalLink" href="https://cal.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 shadow transition">
+              Open Calendar in New Tab <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
             </a>
           </div>
         </div>
 
-        <p class="text-xs text-slate-500">
-          Need custom corporate booking dates? Email directly at: <a href="mailto:muammermubarak@gmail.com" class="text-slate-300 underline">muammermubarak@gmail.com</a>
+        <p class="text-xs text-slate-600 font-medium">
+          Prefer manual scheduling? Contact directly: <a href="mailto:marketing@eximcraft.com" class="text-emerald-700 font-bold underline">marketing@eximcraft.com</a>
         </p>
       </div>
     </div>
@@ -826,36 +949,36 @@
 
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="border-t border-brand-border bg-brand-dark py-12 relative z-10">
+  <footer class="border-t border-white/80 bg-white/70 py-12 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-accent to-brand-cyan flex items-center justify-center text-brand-dark font-display font-bold text-sm">
+
+        <div class="flex items-center gap-3.5">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-cyan-600 flex items-center justify-center text-white font-display font-extrabold text-sm shadow">
             M
           </div>
           <div>
-            <div class="font-display font-bold text-sm text-white">Muammer Mubarak Anik</div>
-            <div class="text-xs text-slate-400">Social Entrepreneur &bull; Corporate Trainer &bull; Growth Consultant</div>
+            <div class="font-display font-bold text-sm text-slate-950">Muammer Mubarak Anik</div>
+            <div class="text-xs text-slate-600 font-medium">Management Consultant &amp; Entrepreneur &bull; Dhaka, Bangladesh</div>
           </div>
         </div>
 
-        <!-- Social & Professional links -->
-        <div class="flex items-center space-x-6 text-sm text-slate-400">
-          <a href="https://www.linkedin.com/in/muammer-mubarak-anik" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="LinkedIn">
-            <i class="fa-brands fa-linkedin text-lg"></i>
+        <!-- Social & Contact Links -->
+        <div class="flex items-center space-x-6 text-slate-600">
+          <a href="https://linkedin.com/in/muammer-mubarak-anik" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-700 transition-colors" title="LinkedIn">
+            <i class="fa-brands fa-linkedin text-xl"></i>
           </a>
-          <a href="mailto:muammermubarak@gmail.com" class="hover:text-white transition-colors" title="Email">
-            <i class="fa-solid fa-envelope text-lg"></i>
+          <a href="mailto:marketing@eximcraft.com" class="hover:text-emerald-700 transition-colors" title="Email">
+            <i class="fa-solid fa-envelope text-xl"></i>
           </a>
-          <a href="tel:+8801674517466" class="hover:text-white transition-colors" title="Call / WhatsApp">
-            <i class="fa-solid fa-phone text-lg"></i>
+          <a href="tel:+8801674517466" class="hover:text-cyan-700 transition-colors" title="Phone / WhatsApp">
+            <i class="fa-solid fa-phone text-xl"></i>
           </a>
         </div>
 
-        <div class="text-xs text-slate-400 text-center md:text-right">
+        <div class="text-xs text-slate-600 font-medium text-center md:text-right">
           &copy; <span id="currentYear"></span> Muammer Mubarak Anik. All Rights Reserved.<br>
-          <span class="text-slate-400">Dhaka, Bangladesh</span>
+          <span class="text-slate-500 font-normal">Official Channel: marketing@eximcraft.com</span>
         </div>
 
       </div>
@@ -863,7 +986,7 @@
   </footer>
 
 
-  <!-- ==================== CLIENT SCRIPTS ==================== -->
+  <!-- ==================== SCRIPTS ==================== -->
   <script>
     // Set Dynamic Year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -906,13 +1029,13 @@
       document.body.removeChild(dummyInput);
 
       const copyIcon = document.getElementById('copyIcon');
-      copyIcon.className = 'fa-solid fa-check text-brand-accent';
+      copyIcon.className = 'fa-solid fa-check text-emerald-600';
       setTimeout(() => {
         copyIcon.className = 'fa-regular fa-copy';
       }, 2000);
     }
 
-    // Modal Control for Scheduling
+    // Modal Control for Calendar Scheduling
     const calModal = document.getElementById('calModal');
     function openCalModal() {
       calModal.classList.remove('hidden');
@@ -923,7 +1046,6 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Close modal if user clicks outside of modal container
     calModal.addEventListener('click', (e) => {
       if (e.target === calModal) {
         closeCalModal();
@@ -934,13 +1056,13 @@
     function preselectWorkshop(name) {
       const select = document.getElementById('serviceSelect');
       if (select) {
-        select.value = 'Corporate Workshop / Training';
+        select.value = 'Corporate Masterclass & Workshop';
         const msg = document.getElementById('clientMessage');
-        msg.value = `Hello Muammer,\n\nWe are interested in booking the "${name}" session for our corporate team. Here are our high-level details:\n- Expected Participants:\n- Desired Month / Format:\n- Key Objectives:`;
+        msg.value = `Hello Muammer,\n\nWe are interested in booking the "${name}" session for our corporate team.\n- Expected Cohort Size:\n- Target Dates:\n- Primary Strategic Objectives:`;
       }
     }
 
-    // Form Submission & Mailto Dispatcher (Zero Server Cost)
+    // Form Submission & Direct Mailto Dispatcher (Zero Server Cost)
     function handleFormSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('clientName').value.trim();
@@ -949,21 +1071,21 @@
       const service = document.getElementById('serviceSelect').value;
       const message = document.getElementById('clientMessage').value.trim();
 
-      const subject = encodeURIComponent(`Advisory RFP / Inquiry: ${service} - ${name} (${company})`);
+      const subject = encodeURIComponent(`Advisory Inquiry: ${service} - ${name} (${company})`);
       const body = encodeURIComponent(
         `Name: ${name}\n` +
         `Email: ${email}\n` +
-        `Company/Org: ${company}\n` +
-        `Service Requested: ${service}\n\n` +
-        `Message:\n${message}`
+        `Organization: ${company}\n` +
+        `Strategic Area: ${service}\n\n` +
+        `Objectives / Scope:\n${message}`
       );
 
-      // Trigger mail client fallback directly
-      window.location.href = `mailto:muammermubarak@gmail.com?subject=${subject}&body=${body}`;
+      // Trigger user default email client to marketing@eximcraft.com
+      window.location.href = `mailto:marketing@eximcraft.com?subject=${subject}&body=${body}`;
 
       const feedback = document.getElementById('formFeedback');
-      feedback.className = 'p-3 rounded-xl text-xs font-medium bg-emerald-950/80 text-brand-accentLight border border-emerald-500/40 block';
-      feedback.textContent = 'Opening your email client to dispatch the message directly to Muammer...';
+      feedback.className = 'p-3.5 rounded-xl text-xs font-semibold bg-emerald-100 text-emerald-900 border border-emerald-300 block';
+      feedback.textContent = 'Opening your email client to dispatch this advisory inquiry to marketing@eximcraft.com...';
     }
 
     // Animated Metric Counters
@@ -974,7 +1096,7 @@
       counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
         const duration = 1600; // ms
-        const stepTime = 20;
+        const stepTime = 25;
         const totalSteps = duration / stepTime;
         const increment = target / totalSteps;
         let current = 0;
@@ -991,19 +1113,17 @@
       });
     }
 
-    // Trigger counter on scroll into view
     window.addEventListener('scroll', () => {
       const counterSection = document.querySelector('.counter');
       if (counterSection && !hasAnimated) {
         const rect = counterSection.getBoundingClientRect();
-        if (rect.top <= window.innerHeight - 50) {
+        if (rect.top <= window.innerHeight - 40) {
           hasAnimated = true;
           runCounters();
         }
       }
     });
 
-    // Run on immediate page load if already visible
     window.onload = function() {
       const counterSection = document.querySelector('.counter');
       if (counterSection) {
