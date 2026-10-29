@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muammer Mubarak Anik | Growth Strategist, Venture Builder & Executive Corporate Trainer</title>
+  <meta name="description" content="Official portfolio and advisory platform of Muammer Mubarak Anik: 2x Startup Founder, Corporate Trainer (5,000+ trained), and GTM Management Consultant specializing in Cleantech, B2B Industrials, and ESG ventures.">
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#090D16',
+              surface: '#0F172A',
+              card: '#162035',
+              border: '#1E293B',
+              accent: '#10B981',       /* Emerald 500 */
+              accentLight: '#34D399',  /* Emerald 400 */
+              cyan: '#06B6D4',
+              gold: '#F59E0B'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Glassmorphism and gradient accents */
+    .glass-nav {
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .glass-card {
+      background: linear-gradient(135deg, rgba(22, 32, 53, 0.75) 0%, rgba(15, 23, 42, 0.9) 100%);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(16, 185, 129, 0.35);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 20px -6px rgba(16, 185, 129, 0.2);
+    }
+    .glow-bg {
+      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.05) 35%, transparent 70%);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #FFFFFF 20%, #94A3B8 70%, #10B981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-emerald-gradient {
+      background: linear-gradient(135deg, #34D399 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-white relative overflow-x-hidden min-h-screen">
+
+  <!-- Ambient Glow Effect in Background -->
+  <div class="fixed inset-0 glow-bg pointer-events-none z-0"></div>
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-brand-border/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand / Identity -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-accent to-brand-cyan flex items-center justify-center text-brand-dark font-display font-extrabold text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            M
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-lg text-white tracking-tight group-hover:text-brand-accentLight transition-colors">
+              Muammer Mubarak Anik
+            </span>
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-medium">Growth & Venture Strategist</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#workshops" class="text-slate-300 hover:text-brand-accentLight transition-colors">Masterclasses</a>
+          <a href="#ventures" class="text-slate-300 hover:text-brand-accentLight transition-colors">Track Record</a>
+          <a href="#achievements" class="text-slate-300 hover:text-brand-accentLight transition-colors">Accreditation</a>
+          <a href="#about" class="text-slate-300 hover:text-brand-accentLight transition-colors">About</a>
+        </nav>
+
+        <!-- Primary Action CTA -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#booking" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold text-brand-dark bg-gradient-to-r from-brand-accent to-brand-cyan hover:opacity-95 shadow-md shadow-emerald-500/20 transition-all hover:shadow-emerald-500/30 hover:scale-105">
+            <i class="fa-regular fa-calendar-check text-sm"></i>
+            Book Advisory
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden">
+          <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors">
+            <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-surface/95 border-b border-brand-border px-4 pt-3 pb-6 space-y-3">
+      <a href="#workshops" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-accent hover:bg-slate-800/60 mobile-nav-link">Executive Workshops</a>
+      <a href="#ventures" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-accent hover:bg-slate-800/60 mobile-nav-link">Ventures & Track Record</a>
+      <a href="#achievements" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-accent hover:bg-slate-800/60 mobile-nav-link">Accreditation</a>
+      <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-brand-accent hover:bg-slate-800/60 mobile-nav-link">Executive Profile</a>
+      <div class="pt-2">
+        <a href="#booking" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-brand-dark bg-brand-accent mobile-nav-link">
+          <i class="fa-regular fa-calendar-check"></i> Book Executive Consultation
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text & Value Proposition -->
+        <div class="lg:col-span-8 space-y-6 text-center lg:text-left">
+          
+          <!-- Trust Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-brand-accentLight text-xs font-semibold uppercase tracking-wider shadow-inner">
+            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+            Web Summit 2025 Honoree &bull; SDG Brand Champion
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.12] tracking-tight">
+            Transforming Market Opportunities into <span class="text-emerald-gradient">Scalable Category Leaders</span>
+          </h1>
+
+          <p class="text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Social Entrepreneur, Strategic Marketing Specialist, and Corporate Trainer. Over a decade building B2B go-to-market engines, scaling cleantech startups, and equipping corporate teams across APAC to drive sustainable profitability.
+          </p>
+
+          <!-- Core Call-to-Actions -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#booking" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-sm font-bold text-brand-dark bg-gradient-to-r from-brand-accent to-brand-cyan hover:opacity-95 shadow-lg shadow-emerald-500/25 transition-all hover:scale-105">
+              <span>Schedule Executive Briefing</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#workshops" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-sm font-semibold text-slate-200 border border-slate-700 bg-slate-900/60 hover:bg-slate-800 hover:border-slate-500 transition-all">
+              <i class="fa-solid fa-chalkboard-user text-brand-accentLight"></i>
+              <span>Explore Workshop Modules</span>
+            </a>
+          </div>
+
+          <!-- Quick Credibility Badges -->
+          <div class="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-brand-accent"></i> Harvard Business School Online Alumni</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-brand-cyan"></i> 2x High-Impact CleanTech Founder</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-users text-brand-accent"></i> 5,000+ Students & Professionals Trained</span>
+          </div>
+        </div>
+
+        <!-- Hero Executive Card / Visual -->
+        <div class="lg:col-span-4 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-sm">
+            <!-- Glow ring background -->
+            <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-brand-accent/40 to-brand-cyan/40 blur-xl opacity-75 animate-pulse"></div>
+            
+            <div class="relative rounded-2xl glass-card p-6 border border-slate-700/80 shadow-2xl space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 rounded-2xl bg-slate-800 border-2 border-emerald-500/40 p-1 flex items-center justify-center overflow-hidden">
+                  <!-- Fallback styled initials avatar with SVG profile frame -->
+                  <div class="w-full h-full rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center text-white font-display font-bold text-2xl">
+                    MA
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-lg text-white">Muammer Mubarak Anik</h3>
+                  <p class="text-xs text-brand-accentLight font-medium">Head of Advisory & Founder</p>
+                  <p class="text-xs text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot text-rose-400 mr-1"></i>Dhaka, Bangladesh</p>
+                </div>
+              </div>
+
+              <!-- Quick Focus Areas Tags -->
+              <div class="space-y-2">
+                <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block">Strategic Focus:</span>
+                <div class="flex flex-wrap gap-1.5 text-xs">
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">GTM Architecture</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">EV & Clean Mobility</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">ESG Export Strategy</span>
+                  <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">Sales SOP Design</span>
+                </div>
+              </div>
+
+              <!-- Contact Card CTA -->
+              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
+                <div class="text-xs">
+                  <div class="text-slate-400">Direct Inquiries:</div>
+                  <div class="text-white font-medium truncate">muammermubarak@gmail.com</div>
+                </div>
+                <button onclick="copyEmail()" class="text-xs px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700 transition" title="Copy Email">
+                  <i id="copyIcon" class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <a href="https://www.linkedin.com/in/muammer-mubarak-anik" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 transition-colors">
+                <i class="fa-brands fa-linkedin text-blue-400 text-sm"></i>
+                Verify LinkedIn Executive Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== METRIC COUNTERS STRIP ==================== -->
+  <section class="py-12 border-y border-brand-border bg-slate-900/50 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        
+        <!-- Metric 1 -->
+        <div class="space-y-2 text-center lg:text-left">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white flex items-center justify-center lg:justify-start">
+            <span class="counter" data-target="200">0</span><span>%+</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider font-semibold text-brand-accentLight">Revenue Growth</div>
+          <p class="text-xs text-slate-400">Scaled Walton Chemical from R&D to market leader</p>
+        </div>
+
+        <!-- Metric 2 -->
+        <div class="space-y-2 text-center lg:text-left">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white flex items-center justify-center lg:justify-start">
+            <span class="counter" data-target="5000">0</span><span>+</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider font-semibold text-brand-cyan">Leaders Trained</div>
+          <p class="text-xs text-slate-400">Students & managers across APAC in GTM & policy</p>
+        </div>
+
+        <!-- Metric 3 -->
+        <div class="space-y-2 text-center lg:text-left">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white flex items-center justify-center lg:justify-start">
+            <span class="counter" data-target="40">0</span><span>+</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider font-semibold text-brand-accentLight">Export Markets</div>
+          <p class="text-xs text-slate-400">Global footprint for 100% biodegradable exports</p>
+        </div>
+
+        <!-- Metric 4 -->
+        <div class="space-y-2 text-center lg:text-left">
+          <div class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white flex items-center justify-center lg:justify-start">
+            <span class="counter" data-target="2">0</span><span>x</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider font-semibold text-brand-gold">Global Startup Laurels</div>
+          <p class="text-xs text-slate-400">Web Summit Alpha/Impact & SDG Brand Champion</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== EXECUTIVE WORKSHOP MODULES ==================== -->
+  <section id="workshops" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-800 text-brand-accentLight text-xs font-semibold tracking-wide border border-slate-700">
+          <i class="fa-solid fa-graduation-cap"></i> Enterprise Masterclasses & Corporate Coaching
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Battle-Tested Frameworks for <span class="text-emerald-gradient">High-Growth Teams</span>
+        </h2>
+        <p class="text-slate-400 text-base leading-relaxed">
+          I conduct private, highly immersive workshops for executive boards, B2B sales teams, and corporate divisions. Every curriculum delivers ready-to-run SOPs, not generic theory.
+        </p>
+      </div>
+
+      <!-- Workshop Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Module 1 -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-brand-accentLight flex items-center justify-center text-xl">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-wider text-emerald-400 font-semibold block mb-1">Module 01 &bull; 1-2 Day Intensive</span>
+              <h3 class="font-display text-xl font-bold text-white">B2B Technical Sales & GTM Architecture</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Equip your corporate sales team with repeatable SOPs to penetrate multi-stakeholder corporate accounts, build technical value propositions, and reduce pipeline velocity cycles.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+                <span>Building repeatable sales playbooks & hiring organograms</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+                <span>Enterprise client acquisition in syndicated/import markets</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+                <span>Contract negotiation, collection ratios & P&L ownership</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8 mt-6 border-t border-slate-800">
+            <a href="#booking" onclick="preselectWorkshop('B2B Technical Sales SOPs & GTM Architecture')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-brand-accent hover:text-brand-dark transition-all">
+              <span>Book This Workshop</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between border-emerald-500/30">
+          <div class="space-y-6">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-brand-cyan flex items-center justify-center text-xl">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-wider text-cyan-400 font-semibold block mb-1">Module 02 &bull; 4-Week Cohort / 1-Day</span>
+              <h3 class="font-display text-xl font-bold text-white">Applied Brand Positioning & Conversion Marketing</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Based on the 150+ marketing methodology curriculum taught at Shikkha. Unpack behavioral economics, magnetic messaging hooks, and full-funnel conversion strategies.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Marketing as Science: Positioning and category design</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Consumer psychology & cognitive purchase decision drivers</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Omnichannel execution: ABM, ATL, BTL & High-ROI Copy</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8 mt-6 border-t border-slate-800">
+            <a href="#booking" onclick="preselectWorkshop('Applied Brand Positioning & Conversion Marketing')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-brand-dark bg-brand-accent hover:bg-brand-accentLight transition-all">
+              <span>Book This Workshop</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-brand-accentLight flex items-center justify-center text-xl">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-wider text-emerald-400 font-semibold block mb-1">Module 03 &bull; Executive Session</span>
+              <h3 class="font-display text-xl font-bold text-white">Sustainable Innovation & ESG Venture Leadership</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Prepare corporate enterprises and exporters for global ESG standards, carbon compliance, circular supply chain transitions, and international climate finance partnerships.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+                <span>Transforming ESG compliance into revenue generators</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+                <span>Clean mobility & circular packaging business model canvas</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-brand-accent mt-0.5"></i>
+                <span>Navigating global buyer ESG standards (Europe, US & APAC)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8 mt-6 border-t border-slate-800">
+            <a href="#booking" onclick="preselectWorkshop('Sustainable Innovation & ESG Venture Leadership')" class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-brand-accent hover:text-brand-dark transition-all">
+              <span>Book This Workshop</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== TRACK RECORD / VENTURES ==================== -->
+  <section id="ventures" class="py-24 bg-slate-900/40 border-t border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-800 text-brand-cyan text-xs font-semibold tracking-wide border border-slate-700">
+          <i class="fa-solid fa-briefcase"></i> Real Venture Building Experience
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Tested in High-Complexity, High-Stakes Markets
+        </h2>
+        <p class="text-slate-400 text-base">
+          Proven execution across conglomerates, cleantech infrastructure, cross-border trade, and digital ecosystems.
+        </p>
+      </div>
+
+      <!-- Case Study Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Case 1: Walton Chemical -->
+        <div class="glass-card rounded-2xl p-8 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Conglomerate Scale-Up</span>
+            <span class="text-xs text-slate-400">2019 - 2021</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Walton Chemical Industries Ltd</h3>
+          <p class="text-xs text-brand-accentLight font-semibold">Founding Team Member & Head of Sales / Business Development</p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Scaled the enterprise from pure R&D to full Go-To-Market and sustainable product-market fit. Built an industry-specialized technical sales force from zero, mapped nationwide import channels across 100+ factories, and delivered <strong class="text-white">200% revenue growth</strong> while maintaining a 70%+ cash collection ratio.
+          </p>
+          <div class="pt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Organogram & SOP Design</span>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">B2B Channel Strategy</span>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">200% Growth</span>
+          </div>
+        </div>
+
+        <!-- Case 2: ThunderVolt -->
+        <div class="glass-card rounded-2xl p-8 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-brand-accentLight border border-emerald-500/20">Clean Mobility Tech</span>
+            <span class="text-xs text-slate-400">2023 - Present</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white">ThunderVolt</h3>
+          <p class="text-xs text-brand-accentLight font-semibold">Founder & Chief Executive Officer</p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Building Bangladesh’s electric vehicle energy distribution backbone. Spearheading a high-throughput battery-swapping network that reduces operational expenditure by 40% and cuts driver downtime from hours of slow charging to under 2 minutes, driving national decarbonization and SME mobility empowerment.
+          </p>
+          <div class="pt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">EV Swapping Infrastructure</span>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Investor Relations</span>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Public-Private Partnerships</span>
+          </div>
+        </div>
+
+        <!-- Case 3: EXIMCRAFT -->
+        <div class="glass-card rounded-2xl p-8 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Global ESG Export</span>
+            <span class="text-xs text-slate-400">2026 - Present</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white">EXIMCRAFT</h3>
+          <p class="text-xs text-brand-accentLight font-semibold">Co-Founder & Chief Marketing Officer</p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Leading the go-to-market narrative and international buyer pipelines targeting the $88B+ global sustainable products market. Connecting 3 regional artisan hubs producing 100% biodegradable plastic alternatives with conscious retail chains and ESG buyers across 40+ countries.
+          </p>
+          <div class="pt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Cross-Border B2B</span>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">ESG Supply Chains</span>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Global Brand Narrative</span>
+          </div>
+        </div>
+
+        <!-- Case 4: Strategic Advisory (Mulytic Energy & Junction) -->
+        <div class="glass-card rounded-2xl p-8 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">Ecosystem & Capital</span>
+            <span class="text-xs text-slate-400">Ongoing</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Ecosystem Incubation & Advisory</h3>
+          <p class="text-xs text-brand-accentLight font-semibold">Fellow at Junction BD &bull; Strategic Advisor at Mulytic Energy</p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Advising Mulytic Energy board on fundraising pipelines leading to Web Summit recognition. Leading strategic programs and venture incubation at Junction BD to turn homegrown social and tech innovations into globally viable, scaleable businesses.
+          </p>
+          <div class="pt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Incubation Architecture</span>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Venture Fundraising</span>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300">Angel Ecosystem</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== HONORS & RECOGNITION ==================== -->
+  <section id="achievements" class="py-20 border-t border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white">
+          Awards & Industry Recognition
+        </h2>
+        <p class="text-slate-400 text-sm">Recognized by premier global and national platforms for impactful venture leadership.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Award 1 -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 text-xl shrink-0">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">SDG Brand Champion Award</h4>
+            <p class="text-xs text-brand-accentLight mt-0.5">Bangladesh Brand Forum &bull; 2024</p>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">Honored for strategic brand leadership in sustainable and clean mobility transformation.</p>
+          </div>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 text-xl shrink-0">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">ALPHA & IMPACT Startup</h4>
+            <p class="text-xs text-cyan-400 mt-0.5">Web Summit &bull; 2025</p>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">Dual global recognition for strategic market expansion and sustainable cleantech innovation.</p>
+          </div>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 text-xl shrink-0">
+            <i class="fa-solid fa-charging-station"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-white text-base">Best Clean Mobility Startup</h4>
+            <p class="text-xs text-emerald-400 mt-0.5">Clean Energy Week &bull; 2025</p>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">Recognized for rapid electric mobility infrastructure scale and decentralized energy storage.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== ABOUT & CREDENTIALS ==================== -->
+  <section id="about" class="py-20 bg-slate-900/30 border-t border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-brand-accentLight text-xs font-semibold tracking-wide border border-slate-700">
+            <i class="fa-solid fa-user-tie"></i> Executive Profile
+          </div>
+          <h2 class="font-display text-3xl font-extrabold text-white">
+            Driven by Purpose. Grounded in Execution.
+          </h2>
+          <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+            <p>
+              I bridge boardroom strategy and operational ground reality. Over the past decade, my work has spanned renewable energy, electric vehicle infrastructure, petrochemical B2B distribution, fintech wallets (ShopUp/PayWell), and nationwide social movements.
+            </p>
+            <p>
+              Beyond commercial ventures, I built programs at <strong>Let's Talk Mental Health (LTMH)</strong> reaching 40,000+ school students and 16,500+ corporate employees across Bangladesh, recognized by the Bill & Melinda Gates Foundation and Diana Award.
+            </p>
+          </div>
+
+          <!-- Academic & Certs Badges -->
+          <div class="pt-4 border-t border-slate-800 grid grid-cols-2 gap-4 text-xs">
+            <div>
+              <span class="text-slate-400 block font-medium">Education</span>
+              <strong class="text-white block mt-0.5">North South University</strong>
+              <span class="text-slate-400">B.B.A. Marketing (2012-2016)</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block font-medium">Executive Certificate</span>
+              <strong class="text-white block mt-0.5">Harvard Business School Online</strong>
+              <span class="text-slate-400">Entrepreneurship Essentials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl glass-card p-8 border border-slate-800 space-y-6">
+            <h3 class="font-display font-bold text-lg text-white flex items-center gap-2">
+              <i class="fa-solid fa-check-double text-brand-accent"></i> Core Executive Competencies
+            </h3>
+            
+            <div class="space-y-4 text-xs">
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1.5 font-medium">
+                  <span>B2B GTM Strategy & Sales SOP Design</span>
+                  <span class="text-brand-accentLight">98%</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand-accent to-brand-cyan h-full w-[98%]"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1.5 font-medium">
+                  <span>Brand Positioning & Behavioral Messaging</span>
+                  <span class="text-brand-accentLight">95%</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand-accent to-brand-cyan h-full w-[95%]"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1.5 font-medium">
+                  <span>CleanTech & EV Infrastructure Economics</span>
+                  <span class="text-brand-accentLight">92%</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand-accent to-brand-cyan h-full w-[92%]"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1.5 font-medium">
+                  <span>Corporate Training & Facilitation</span>
+                  <span class="text-brand-accentLight">96%</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-brand-accent to-brand-cyan h-full w-[96%]"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quote/Philosophy -->
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 italic text-slate-300 text-xs leading-relaxed">
+              &ldquo;Great strategies are meaningless without the operational architecture and frontline coaching required to execute them every single day.&rdquo;
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== BOOKING & CONTACT SECTION ==================== -->
+  <section id="booking" class="py-24 border-t border-brand-border relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Context & Booking Details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-brand-accentLight text-xs font-semibold tracking-wide border border-slate-700">
+            <i class="fa-regular fa-clock"></i> Consultations & Bookings
+          </div>
+          
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Let's Build Your <span class="text-emerald-gradient">Growth Engine</span>
+          </h2>
+
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Whether you are looking to train your corporate business development team, formulate an export GTM strategy, or advise on cleantech venture scale, get in touch directly.
+          </p>
+
+          <!-- Contact items list -->
+          <div class="space-y-4 pt-2">
+            <div class="flex items-center gap-4 text-sm text-slate-300">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-accent text-base border border-slate-700 shrink-0">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Direct Email</div>
+                <a href="mailto:muammermubarak@gmail.com" class="text-white hover:text-brand-accent transition-colors font-medium">muammermubarak@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 text-sm text-slate-300">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-cyan text-base border border-slate-700 shrink-0">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Direct Phone / WhatsApp</div>
+                <a href="tel:+8801674517466" class="text-white hover:text-brand-cyan transition-colors font-medium">+880 1674 517466</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 text-sm text-slate-300">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-brand-accentLight text-base border border-slate-700 shrink-0">
+                <i class="fa-solid fa-map-pin"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Location</div>
+                <span class="text-white font-medium">Dhaka, Bangladesh &bull; Available Globally</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schedule via Cal.com Modal Button -->
+          <div class="pt-6">
+            <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-950/40 to-slate-900 border border-emerald-500/30 space-y-3">
+              <h4 class="font-display font-bold text-white text-sm flex items-center gap-2">
+                <i class="fa-regular fa-calendar text-brand-accent"></i> Fast-Track Instant Meeting
+              </h4>
+              <p class="text-xs text-slate-400">Prefer to book directly on the calendar for a 30-min discovery call?</p>
+              <button onclick="openCalModal()" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs uppercase tracking-wider font-bold text-brand-dark bg-brand-accent hover:bg-brand-accentLight transition-colors">
+                <span>Open Instant Booking Calendar</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form with Direct Mailto Dispatcher -->
+        <div class="lg:col-span-7">
+          <div class="rounded-2xl glass-card p-8 border border-slate-800">
+            <h3 class="font-display font-bold text-xl text-white mb-2">Send an Advisory RFP or Query</h3>
+            <p class="text-xs text-slate-400 mb-6">Fill in the details below to receive a response within 24 business hours.</p>
+
+            <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="clientName">Full Name *</label>
+                  <input type="text" id="clientName" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="clientEmail">Work Email *</label>
+                  <input type="email" id="clientEmail" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="clientCompany">Organization / Institution</label>
+                  <input type="text" id="clientCompany" placeholder="Company or University" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="serviceSelect">Engagement Type *</label>
+                  <select id="serviceSelect" required class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition">
+                    <option value="Corporate Workshop / Training">Corporate Masterclass / Workshop</option>
+                    <option value="GTM / Sales SOP Advisory">GTM & Sales SOP Advisory</option>
+                    <option value="Cleantech / ESG Strategy">Cleantech & Sustainable Sourcing</option>
+                    <option value="Keynote / Panel Speaking">Keynote / University Lecture</option>
+                    <option value="Other">Other Strategic Opportunity</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="clientMessage">Brief Outline of Objectives *</label>
+                <textarea id="clientMessage" rows="4" required placeholder="Describe your team size, timeline, and what specific outcomes you aim to achieve..." class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-accent transition"></textarea>
+              </div>
+
+              <div id="formFeedback" class="hidden p-3 rounded-xl text-xs font-medium"></div>
+
+              <button type="submit" class="w-full py-4 rounded-xl text-sm font-bold text-brand-dark bg-gradient-to-r from-brand-accent to-brand-cyan hover:opacity-95 shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.01]">
+                Transmit Advisory Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== CAL.COM / SCHEDULING MODAL ==================== -->
+  <div id="calModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative w-full max-w-3xl rounded-2xl bg-brand-surface border border-slate-700 shadow-2xl p-6 sm:p-8 overflow-hidden max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div>
+          <h3 class="font-display font-bold text-lg text-white">Select a Time for Consultation</h3>
+          <p class="text-xs text-slate-400">Direct calendar interface with Muammer Mubarak Anik</p>
+        </div>
+        <button onclick="closeCalModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="py-6 flex-1 overflow-y-auto space-y-6 text-center">
+        <!-- Interactive Cal Placeholder & direct embed instructions -->
+        <div class="p-8 rounded-xl bg-slate-900/90 border border-dashed border-slate-700 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-emerald-500/10 text-brand-accentLight mx-auto flex items-center justify-center text-2xl">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <h4 class="font-display font-semibold text-white text-base">Cal.com / Calendly Integration Ready</h4>
+          <p class="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
+            To make this active 100% free forever: Create an account on <a href="https://cal.com" target="_blank" class="text-brand-accent underline">Cal.com</a> or <a href="https://calendly.com" target="_blank" class="text-brand-cyan underline">Calendly</a>, and insert your personal booking URL below.
+          </p>
+          <div class="pt-2">
+            <a id="externalCalLink" href="https://cal.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-accent text-brand-dark font-bold text-xs uppercase tracking-wider hover:opacity-90 transition">
+              Open Calendar in New Tab <i class="fa-solid fa-external-link text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-500">
+          Need custom corporate booking dates? Email directly at: <a href="mailto:muammermubarak@gmail.com" class="text-slate-300 underline">muammermubarak@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-brand-border bg-brand-dark py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-accent to-brand-cyan flex items-center justify-center text-brand-dark font-display font-bold text-sm">
+            M
+          </div>
+          <div>
+            <div class="font-display font-bold text-sm text-white">Muammer Mubarak Anik</div>
+            <div class="text-xs text-slate-400">Social Entrepreneur &bull; Corporate Trainer &bull; Growth Consultant</div>
+          </div>
+        </div>
+
+        <!-- Social & Professional links -->
+        <div class="flex items-center space-x-6 text-sm text-slate-400">
+          <a href="https://www.linkedin.com/in/muammer-mubarak-anik" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="LinkedIn">
+            <i class="fa-brands fa-linkedin text-lg"></i>
+          </a>
+          <a href="mailto:muammermubarak@gmail.com" class="hover:text-white transition-colors" title="Email">
+            <i class="fa-solid fa-envelope text-lg"></i>
+          </a>
+          <a href="tel:+8801674517466" class="hover:text-white transition-colors" title="Call / WhatsApp">
+            <i class="fa-solid fa-phone text-lg"></i>
+          </a>
+        </div>
+
+        <div class="text-xs text-slate-400 text-center md:text-right">
+          &copy; <span id="currentYear"></span> Muammer Mubarak Anik. All Rights Reserved.<br>
+          <span class="text-slate-400">Dhaka, Bangladesh</span>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==================== CLIENT SCRIPTS ==================== -->
+  <script>
+    // Set Dynamic Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = !mobileMenu.classList.contains('hidden');
+      if (isExpanded) {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      }
+    });
+
+    // Close mobile menu on clicking any navigation link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    // Copy Email Functionality
+    function copyEmail() {
+      const email = 'marketing@eximcraft.com';
+      const dummyInput = document.createElement('textarea');
+      dummyInput.value = email;
+      document.body.appendChild(dummyInput);
+      dummyInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummyInput);
+
+      const copyIcon = document.getElementById('copyIcon');
+      copyIcon.className = 'fa-solid fa-check text-brand-accent';
+      setTimeout(() => {
+        copyIcon.className = 'fa-regular fa-copy';
+      }, 2000);
+    }
+
+    // Modal Control for Scheduling
+    const calModal = document.getElementById('calModal');
+    function openCalModal() {
+      calModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCalModal() {
+      calModal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal if user clicks outside of modal container
+    calModal.addEventListener('click', (e) => {
+      if (e.target === calModal) {
+        closeCalModal();
+      }
+    });
+
+    // Pre-select workshop inside contact dropdown
+    function preselectWorkshop(name) {
+      const select = document.getElementById('serviceSelect');
+      if (select) {
+        select.value = 'Corporate Workshop / Training';
+        const msg = document.getElementById('clientMessage');
+        msg.value = `Hello Muammer,\n\nWe are interested in booking the "${name}" session for our corporate team. Here are our high-level details:\n- Expected Participants:\n- Desired Month / Format:\n- Key Objectives:`;
+      }
+    }
+
+    // Form Submission & Mailto Dispatcher (Zero Server Cost)
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('clientName').value.trim();
+      const email = document.getElementById('clientEmail').value.trim();
+      const company = document.getElementById('clientCompany').value.trim() || 'N/A';
+      const service = document.getElementById('serviceSelect').value;
+      const message = document.getElementById('clientMessage').value.trim();
+
+      const subject = encodeURIComponent(`Advisory RFP / Inquiry: ${service} - ${name} (${company})`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company/Org: ${company}\n` +
+        `Service Requested: ${service}\n\n` +
+        `Message:\n${message}`
+      );
+
+      // Trigger mail client fallback directly
+      window.location.href = `mailto:muammermubarak@gmail.com?subject=${subject}&body=${body}`;
+
+      const feedback = document.getElementById('formFeedback');
+      feedback.className = 'p-3 rounded-xl text-xs font-medium bg-emerald-950/80 text-brand-accentLight border border-emerald-500/40 block';
+      feedback.textContent = 'Opening your email client to dispatch the message directly to Muammer...';
+    }
+
+    // Animated Metric Counters
+    const counters = document.querySelectorAll('.counter');
+    let hasAnimated = false;
+
+    function runCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 1600; // ms
+        const stepTime = 20;
+        const totalSteps = duration / stepTime;
+        const increment = target / totalSteps;
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.ceil(current);
+          }
+        }, stepTime);
+      });
+    }
+
+    // Trigger counter on scroll into view
+    window.addEventListener('scroll', () => {
+      const counterSection = document.querySelector('.counter');
+      if (counterSection && !hasAnimated) {
+        const rect = counterSection.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 50) {
+          hasAnimated = true;
+          runCounters();
+        }
+      }
+    });
+
+    // Run on immediate page load if already visible
+    window.onload = function() {
+      const counterSection = document.querySelector('.counter');
+      if (counterSection) {
+        const rect = counterSection.getBoundingClientRect();
+        if (rect.top <= window.innerHeight) {
+          hasAnimated = true;
+          runCounters();
+        }
+      }
+    };
+  </script>
+</body>
+</html>
